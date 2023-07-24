@@ -12,17 +12,18 @@ const socials = [
 		handle: "@suryaumapathy2812",
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:suryaumapathy2812@gmail.com",
-		label: "Gmail",
-		handle: "suryaumapathy2812",
-	},
-	{
 		icon: <Github size={20} />,
 		href: "https://github.com/suryaumapathy2812",
 		label: "Github",
 		handle: "suryaumapathy2812",
 	},
+	{
+		icon: <Mail size={20} />,
+		href: "mailto:suryaumapathy2812@gmail.com",
+		label: "Gmail",
+		handle: "suryaumapathy2812@",
+	},
+
 ];
 
 export default function Example() {
