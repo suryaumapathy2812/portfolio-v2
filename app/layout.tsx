@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 		default: "suryaumapathy.in",
 		template: "%s | suryaumapathy.in",
 	},
-	description: "Full Stack Javascript Developer from Chennai who loves to build and deliver quality products",
+	description: "Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
 	openGraph: {
 		title: "suryaumapathy.in",
 		description:
-			"Full Stack Javascript Developer from Chennai who loves to build and deliver quality products",
+			"Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
 		url: "https://suryaumapathy.in",
 		siteName: "suryaumapathy.in",
 		images: [
