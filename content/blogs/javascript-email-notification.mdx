@@ -1,0 +1,145 @@
+---
+title: JavaScript - Email Notification
+description: Using EmailJS to send email Notification from client side.
+date: 2022-01-02
+---
+
+Lets send some email notifications using JavaScript shall we.
+
+
+## Lets Get Started
+
+
+To send email using JavaScript, 
+
+
+First we will register an account on [EmailJS](https://dashboard.emailjs.com/sign-up)
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9bb4b16a-e715-4df5-8f0a-7df6b00e405d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=2f2cc7baac7aee094c89efaa9331cda80f74add37ccb6e4f702e654f91723cae&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Once Signed Up. Sign In to EmailJS
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/37425844-1073-4f5d-8d0e-48fa152b73e5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=17afd71e963ffae49ee1e5a3e277a0b45aef8efdc6034988713bfada2891e613&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Once you are signed in. We’ll add a service provide to send emails from
+
+
+Click on Add New Service
+
+
+Will go with **Gmail** as our service provider (if you have your personal email from other providers you can choose the respective once).
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/761e3a40-38b2-4166-a4d2-5949c0b8f2ee/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=c7adb5a292f554a8a301436a743b6fa612c5e455eca862e452f3eaadf803e283&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Click on connect account
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f2ffac3-9693-4766-931e-8fbe06242522/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=829fff28d892fdec2d83a508ac45c904b193c328207ea8ffea75760c886ca853&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Click on Continue to provide EmailJS the access to our service provider 
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/08769371-7a2c-43fd-a48e-224bd57af934/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=0d7d1c000ca01cf9044096dd3cb7ebc98db8e15529d3c23020db2066612e99ed&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Copy your service ID as we will need it later on.
+
+
+Finally choose Create Service
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bfbe8b27-944f-4290-9872-160637fbfce8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=9fd8f093d65da337434d178a54ba93d94e64fd638a522aaf9fcce6f467517759&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+You will receive a test email from Email JS to confirm that service has successfully created.
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/48ad16c8-b59d-4e7d-a6a3-beebc1661598/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=b9fc546cbfbdcbf3c1ed1d4f0726916f1cddef56c6deaec78acdf3b58805bda9&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+## Creating Email Template
+
+
+Now That we have added the email service provider lets create a email template.
+
+
+Go to Email Templates. 
+
+
+Choose Create New Templates
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9d9079dc-8f4f-4f01-bb7b-973c8901ebcb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=444e726904f50524550749c781576af28369ec26e75aa8d3b1b9767108201ef1&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Replace your existing _To Email_ with `{{to_email}}`.
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9247bfb9-a557-4b58-9db6-75a088c030e1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=a2f9702a6d55eca66ccd4295220729fcc89b5f9fbd334ccbc286ef760fa9608c&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Will save the template and Copy the template ID from the settings tab.
+
+
+## Integration
+
+
+Now Lets integrate EmailJS to our Application.
+
+
+Go to Integrations > Browser.
+
+
+Copy the code snippet to your project’s `.html` file
+
+
+![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7458f2e6-4945-4d05-bf96-bc5cd16d74c6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180038Z&X-Amz-Expires=3600&X-Amz-Signature=b27dcd174aa4e2b87c1990be3cecabc42d97a21cc478a62eb2add88b3d32d68d&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+Now Create a `email.js` file in your project. 
+
+
+Copy and paste the below code in to your `email.js` and paste your `service-id` and `template id` that we have copied earlier. 
+
+
+```javascript
+function sendEmailNotification(body) {
+    emailjs.send(
+        "service_3g4ehec",
+        "template_ikz4w6w",
+        body
+    ).then(
+        function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            // TODO: to do after Email is sent SUCCESSFULLY  //
+						....
+        }, function (error) {
+            console.log('FAILED...', error);
+            // TODO: to do if sending Email was UNSUCCESSFUL  //
+						.....
+        }
+    );
+}
+
+const emailBody = {
+    to_email: "to-email-address@something.com", // replace it with the receiver's email address
+    to_name: " Yop-mail ",                      // replace it with the receiver's name
+    message: "hello world",
+}
+
+sendEmailNotification(emailBody);
+```
+
+
+And thats it. 
+
+
+To send the email, Construct an `emailBody` object and pass it as an parameter to the `sendEmailNotification` function.
+

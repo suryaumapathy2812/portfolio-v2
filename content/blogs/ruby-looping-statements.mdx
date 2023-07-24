@@ -1,0 +1,91 @@
+---
+title: Ruby - Looping statments
+description: Looping in programming languages is a feature which clears the way for the execution of a set of instructions or functions repeatedly when some of the condition evaluates to true or false.
+date: 2022-05-31
+---
+
+Looping in programming languages is a feature which clears the way for the execution of a set of instructions or functions repeatedly when some of the condition evaluates to true or false.
+
+
+The loops in Ruby are :
+
+- for loop
+- while loop
+- do..while loop
+- until loop
+
+```ruby
+# Syntax
+
+# for loop
+for variable in expression do
+	# code ...
+end
+
+# Example 
+for i in 1..4  do
+		puts "The value of i is #{i}"
+end 
+The value of i is 1
+The value of i is 2
+The value of i is 3
+The value of i is 4
+```
+
+
+```ruby
+# while loop
+while condition
+		# code ...
+end
+
+# Example
+i = 0
+num = 5
+
+while i < 5 do
+		puts "Inside the loop i = #{i}" 
+    i +=1
+end
+
+Inside the loop i = 0
+Inside the loop i = 1
+Inside the loop i = 2
+Inside the loop i = 3
+Inside the loop i = 4
+```
+
+
+```ruby
+# do..while loop
+loop do
+		# code ...
+		break if booleanExpression
+end
+
+# Example
+loop do   
+  puts "Checking for answer"   
+  answer = gets.chomp   
+  if answer != '5'   
+    break   
+  end   
+end
+```
+
+
+```ruby
+# Until loop
+until condition do
+		# code ....
+end
+
+# Example 
+i = 7
+
+until i==10 do
+		puts "the value of i is #{i}"
+		i = i + 1
+end
+```
+

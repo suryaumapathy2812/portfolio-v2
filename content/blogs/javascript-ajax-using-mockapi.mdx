@@ -1,0 +1,133 @@
+---
+title: JavaScript - AJAX using MockAPI
+description: Implementing AJAX by uing MockAPI to store and retrieve data through a URL.
+date: 2022-01-01
+---
+
+Its time that we move our data to cloud based storage.
+
+
+# Lets get started
+
+1. Visit [Mockapi.io](https://mockapi.io/), and Sign Up by clicking on the Get Started.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/14fae7ce-e14d-4709-adfa-29a7951b3acd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180007Z&X-Amz-Expires=3600&X-Amz-Signature=6605d7509d17fe4c7f0a6580cd86886e4218442ad350a132ac805dcd73d3f03c&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+2. You can either sign in using Github, Google or Sign up the traditional method that is my manualing entering the user details.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/58c4a1df-9130-4a0b-a3e0-2f6e7fd0f5a1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180008Z&X-Amz-Expires=3600&X-Amz-Signature=8a753f979370cf9f24b5156884cf9e290b3ebae8d751bfe0fc8a5c4b628258bf&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+3. Now that we are inside the MockAPI let first create a project by clicking on the + icon.
+4. Enter the name of your project and click on create.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee7f6173-4a44-4529-a7f1-584df2e702ce/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180014Z&X-Amz-Expires=3600&X-Amz-Signature=abb627304f645f5a768223670a90ef9450fc41a67a5b3d4b71336038406bcd44&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+5. Once the project is create click the project name.
+6. Lets create a Resource where the datas will be stored and read from by clicking on New Resource.
+7. Enter the name for the resource.
+	1. Note: if you are going to store user list then name it as users or user_list.
+	2. In my case, I am going to store only the tasks.
+	3. If have a clear idea of the JSON data you are going to store then You can modify the schema based on your JSON Object
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a66c7f67-fb6c-4127-a9b2-2ba902081b24/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180015Z&X-Amz-Expires=3600&X-Amz-Signature=7c9cac7263744ca19bb238a2fc91a377214666af08e1450af8f64cf5ce9fa2ba&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+8. Click on create to create your resource.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8989d20a-dfd9-4c7e-a0fc-ea8878bed1d8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180019Z&X-Amz-Expires=3600&X-Amz-Signature=9b59435b361d1a26f45cf3a22bb2d1f257f2530d4f427c8acbf8093132816b3b&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+9. As a feature of MockAPI, You can generate data by just clicking on the resource length.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3242c310-3635-4e96-a168-30dc48d2811b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180021Z&X-Amz-Expires=3600&X-Amz-Signature=d15f18819f301071b6c0b37c0e54c408b2fdaac3f9411b89745eaeaf5bb68dae&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+10. Click the Data to see if your randomly genereated data.
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3284de39-d78c-4401-82b2-decdd70837fb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180022Z&X-Amz-Expires=3600&X-Amz-Signature=1c47c25a21aee84fd5da1d0b7414fd768dee7efe6eac151d94f9a5d84dcf4b82&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+11. Now that we have a place to store or retrieve data. We still need a way to access it from our JavaScript project.
+12. To solve this  MockAPI provides us a API Url using which we can send and receive data from our MockAPI resource.
+13. Copy the URL as below shown
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c3f34470-c022-44cd-9d6a-7d58be33a2a0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180027Z&X-Amz-Expires=3600&X-Amz-Signature=53ae17647380c69d0a7f68aff7f31fe545b57eeb43d33c0f1b68303ed8fddf87&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+14. Paste the url in the new tab and replace `:endpoint` with your resource name.
+
+	Note: recommended you install [this](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Extension.
+
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e105d0d8-de15-44df-9915-b9e9295f2571/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180027Z&X-Amz-Expires=3600&X-Amz-Signature=a7e31437a37e4097846f2f5f69f1ee07b283770be86de923f370e34b0c592eb2&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+# Integration
+
+1. Open you project using your IDE. I’ll be using Visual Studio Code
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ae12bceb-db3e-45c1-b5a8-792e925e8d0c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180029Z&X-Amz-Expires=3600&X-Amz-Signature=d5036ee2122027ffbc78fc14f02045287cee4018d1754b09bc9d3c271cacf5a2&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+2. Using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Extension i am able to run my application on [http://localhost:5000](http://localhost:5000/)
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6a809214-6c07-4ce3-b6fb-38a16813ca95/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180031Z&X-Amz-Expires=3600&X-Amz-Signature=07050ab33f3ad9867fb979840b06e926f04baba9064e0a753694673a8dafa67e&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+3. Now that the application is up and running. We’ll be using the [Axios](https://axios-http.com/docs/intro) library to send and retrieve data the MockAPI URL.
+4. copy and paste this script tag in you `.html` file
+
+	```javascript
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	```
+
+5. Lets write a function that will retrieve data from the MockAPI.
+
+	```javascript
+	function getTasksFromURL() {
+	    const url = "https://your-mockapi-endpoint/resource-name";
+	    axios.get(url)
+	        .then(function (response) {
+	            console.table(response.data);
+							// TODO: things to happen after the data is retrieved from the MockAPI
+		
+		       })
+	        .catch(function (error) {
+	            console.log(error);
+							// TODO: things to happen if failed to retieve data from the MockAPI
+	
+	        });
+	}
+	
+	getTasksFromURL();
+	```
+
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d4fb65ba-2db5-45e1-9c10-f401f301ce5e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180036Z&X-Amz-Expires=3600&X-Amz-Signature=325043873231762bf9fb0278831163ffe7891a63649a8f8959b8dc719964979f&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+6. Now that we are able to get data from the API. lets write some code to send data to the API so that we can store new data.
+
+	```javascript
+	function sendTaskToURL() {
+	
+	    const data = {
+	        task: "sending data to mockAPI"
+	    }
+	
+	    const url = "https://your-mockapi-endpoint/resource-name";
+	    axios.post(url, data)
+	        .then(function (response) {
+	            console.log(response.data);
+	            // TODO: things to happen after the data is sent to the MockAPI
+	
+	        })
+	        .catch(function (error) {
+	            console.log(error);
+							// TODO: things to happen if failed to send data to the MockAPI
+							
+	        });
+	
+	}
+	
+	sendTaskToURL();
+	```
+
+
+	![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/881f0e8d-e719-4985-a71e-b782a2eab2cf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230724T180037Z&X-Amz-Expires=3600&X-Amz-Signature=36da9bc421b5340ba25d8f66fc49b33fd340064ee224c6b97ea604fa2fe98507&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+And thats how you send and retrieve data from a URL using MockAPI
+

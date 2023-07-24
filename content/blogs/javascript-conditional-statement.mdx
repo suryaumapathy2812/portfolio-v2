@@ -1,0 +1,114 @@
+---
+title: JavaScript - Conditional Statement
+description: Conditional statements are used to perform different actions based on different conditions
+date: 2021-11-28
+---
+
+In any programming language, Conditional statements are used to decide the flow of control or execution based on different conditions. If a condition is true, certain set of instruction is executed. If the condition is false, another set of instruction is executed.
+
+
+Conditional statements control behavior and determine whether or not pieces of code can run. There are multiple types conditional statements
+
+- `if` statement - specific block of code to be executed, if a specified condition is true
+- `else` statement - specific block of code to be executed, if a specified condition is false
+- `else if` statement - a new condition to test, if the first condition is false
+
+## The `if` Statement
+
+
+Use the `if` statement to execute a block of code, if a condition is true.
+
+
+### Syntax
+
+
+```javascript
+if( condition ){
+		// block of code to be executed
+}
+```
+
+
+### Example
+
+
+```javascript
+const date = new Date();
+const hour = date.getHours();
+
+if( hour <= 12 ){
+		console.log("Good Morning");
+}
+
+```
+
+
+## The `else` Statement
+
+
+Use the `else` statement to execute a block of code, if the condition is false.
+
+
+### Syntax
+
+
+```javascript
+if( condition ){
+		// block of code to be executed if condition is true
+}else{
+		// block of code to be executed if condition is false
+}
+```
+
+
+### Example
+
+
+```javascript
+const date = new Date();
+const hour = date.getHours();
+
+if( hour <= 12 ){
+		console.log("Good Morning");
+}else{
+		console.log("Good Afternoon/Evening");
+}
+```
+
+
+## The `else if` Statement
+
+
+Use the `else if` statement to specify a new condition if the first condition is false.
+
+
+### Syntax
+
+
+```javascript
+if( condition1 ){
+		// block of code to be executed if the condition1 is true
+}else if( condition2 ){
+		// block of code to be executed if the condition1 is false and condition2 is true
+}else{
+		// block of code to be executed if both the conditions are false
+}
+```
+
+
+### Example
+
+
+```javascript
+const date = new Date();
+const hour = date.getHours();
+
+if( hour <= 12 ){
+		console.log("Good Morning");
+}else if( hour <= 18 ){
+		console.log("Good Afternoon")
+}else{
+		console.log("Good Evening");
+}
+```
+

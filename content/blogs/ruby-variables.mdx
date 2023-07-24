@@ -1,0 +1,81 @@
+---
+title: Ruby - Variables
+description: Ruby variables are locations which hold data to be used in the programs. Each variable has a different name. These variable names are based on some naming conventions.
+date: 2022-02-28
+---
+
+**Variables** are the memory locations, which hold any data to be used by any program. Ruby supports four types of variables
+
+- Local variable
+- Global variable
+- Class variable
+- Instance variable
+
+## Local Variables
+
+
+Local variable name **starts with a lowercase letter or underscore(_)**. It is only accessible within the block of its initialization. Outside the code block, the variable has no scope. 
+
+
+```ruby
+def myFunction
+		foo = "This is a local variable"
+		_bar = "This is also a local variable"
+end
+```
+
+
+## Global Variable
+
+
+A global variable **starts with a $ sign**. Its scope is global, it can be accessed from any where in the program. A uninitialized global variable will have a **nil** value. 
+
+
+It is adviced not to use them as they make the program cryptic and complex
+
+
+```ruby
+$global_var = "This is a global variable"
+```
+
+
+## Class Variable
+
+
+A Class variable **starts with @@ sign**. They **need to be initilized** before use. The Class variable belongs to the whole Class and is accessable anywhere inside the class. 
+
+
+Class variables are **shared across all the instances**. If the value of the class variable happends to change in one instance of class, then it is changed in all other instances as well. 
+
+
+```ruby
+Class Student
+	@@no_of_students = 0
+end
+```
+
+
+## Instance Variable
+
+
+An Instance variable name **starts with a @ sign**. They **don’t need to be initialized**. The uninitialized instance variable will have a nil value. 
+
+
+These Instance Variables belongs to the single instance of the class and are accessable anywhere with inside the class. Any changes to the value of the instance variable will not reflect in other instances of the Class.
+
+
+Instance Variable private to the object. To access the values of these Instance variable an additional method is required.
+
+
+```ruby
+Class Student
+	@@no_of_students = 0
+	@name
+
+	def name
+		return @name
+	end
+	
+end
+```
+

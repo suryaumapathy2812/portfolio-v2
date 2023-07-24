@@ -1,26 +1,31 @@
 {
-  "name": "chronark.com",
-  "version": "0.1.0",
+  "name": "suryaumapathy.in",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "fmt": "pnpm rome check . --apply-suggested && pnpm rome format . --write"
+    "fmt": "pnpm rome check . --apply-suggested && pnpm rome format . --write",
+    "prebuild": "node ./fetch.js"
   },
   "dependencies": {
     "@next/font": "^13.4.3",
     "@next/mdx": "^13.4.3",
+    "@notionhq/client": "^2.2.8",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@upstash/redis": "^1.20.6",
     "contentlayer": "^0.3.0",
+    "contentlayer-source-notion": "^0.0.1-alpha.26",
+    "dotenv": "^16.3.1",
     "framer-motion": "^10.12.12",
     "lucide-react": "^0.220.0",
     "markdown-wasm": "^1.2.0",
     "next": "13.4.3",
     "next-contentlayer": "^0.3.0",
+    "notion-to-md": "^3.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-wrap-balancer": "^0.5.0",
@@ -28,6 +33,7 @@
     "rehype-pretty-code": "^0.9.4",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.3",
     "typescript": "5.0.4"
   },
   "devDependencies": {

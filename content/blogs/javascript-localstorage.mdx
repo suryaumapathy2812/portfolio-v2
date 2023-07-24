@@ -1,0 +1,113 @@
+---
+title: JavaScript - Web Storage API
+description: localStorage is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date
+date: 2021-11-29
+---
+
+The Web Storage API is a simple syntax for storing and retrieving data in the browser. The two mechanisms within the Web Storage are **`localStorage`** and **`sessionStorage`**
+
+
+# Local Storage
+
+
+**localStorage** is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date. A Storage object which can be used to access the local storage space of the current domain.
+
+
+Simply put, the `localStorage` object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.
+
+- _localStorage_ is bound to the origin (domain/protocol).
+- Different protocols or subdomains have different storage objects.
+- These different storage objects can't access data from each other.
+- Capacity of `localStorage` is upto 10mb.
+
+## Syntax
+
+
+```javascript
+window.localStorage
+```
+
+
+Saving a data to localStorage
+
+
+```javascript
+localStorage.setItem("key", "value");
+```
+
+
+Reading an item from localStorage
+
+
+```javascript
+const value = localStorage.getItem("key");
+```
+
+
+Removing an item from localStorage
+
+
+```javascript
+localStorage.removeItem("key");
+```
+
+
+Removing all items from localStorage
+
+
+```java
+localStorage.clear();
+```
+
+
+# Session Storage
+
+
+The **sessionStorage** accesses a session Storage object for the current page. It is similar to the `localStorage` difference being that localstorage values doesn't expire, but the data in the `sessionStorage` is cleared once the page _session_ ends in other words when the page is closed.
+
+- A **page session** lasts as long as the tab or browser is open.
+- Opening a page in a new tab or window creates a new _session_.
+- Opening multiple tabs/windows will creates `sessionStorage` for each tab/window.
+- Duplicating a tab copies the tab's `sessionStorage` into the new tab.
+- Closing a tab/window ends the session and clears objects in `sessionStorage`.
+- Capacity of  `sessionStorage` is upto 5mb.
+
+## Syntax
+
+
+```javascript
+window.sessionStorage
+```
+
+
+Saving a data to sessionStorage
+
+
+```javascript
+sessionStorage.setItem("key", "value");
+```
+
+
+Reading an item from sessionStorage
+
+
+```javascript
+const value = sessionStorage.getItem("key");
+```
+
+
+Removing an item from sessionStorage
+
+
+```javascript
+sessionStorage.removeItem("key");
+```
+
+
+Removing all items from sessionStorage
+
+
+```java
+sessionStorage.clear();
+```
+

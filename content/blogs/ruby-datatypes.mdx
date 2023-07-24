@@ -1,0 +1,103 @@
+---
+title: Ruby - Datatypes
+description: Data types represents a type of data such as text, string, numbers, etc
+date: 2022-05-24
+---
+
+Datatypes represents a type of data such as string, number, etc. There are different data types in Ruby:
+
+- Strings
+- Numbers
+- Booleans
+- Hashes
+- Arrays
+- Symbols
+
+## Numbers
+
+
+Integers and floating point numbers come in the category if numbers. Integers are held internally in binary form. Integer numbers doesnot contain decimal points.
+
+- **Fixnum** - they are normal numbers. Eg: 1
+- **Bignum** - They are big numbers. Eg: 111111111111
+- **Float** - They are numbers with decimal points. Eg: 3.0
+- **Complex** - They are Imaginary numbers. Eg: 4 +3i
+- **Rational** - They are factorial numbers. Eg: 9/4
+- **BigDecimal** - Precision Decimal numbers. 6.0
+
+```ruby
+irb(main):001:0> 10 + 5
+=> 15
+irb(main):002:0> 10.0 + 5
+=> 15.0
+irb(main):003:0> 17/2
+=> 8
+irb(main):004:0> 17.0/2
+=> 8.5
+```
+
+
+## Strings
+
+
+A string is a group of letters that represents a sentence or a word. Strings are defined by **enclosing** a text **within single or double quotes**
+
+
+Strings can be concatenated by using + sign between them and can also be multiplied by using * sign to repeat the same string
+
+
+```ruby
+irb(main):001:0> "Hello " + "World"
+=> "Hello World"
+irb(main):002:0> "Hello " * 3
+=> "Hello Hello Hello"
+```
+
+
+## Hashes
+
+
+Hashes are similar to that of an object. A hash assign its values to its keys. They can be looked up by their keys. **Value** **to a key is** **assigned by using => sign.** All key/value pairs are enclosed inside a curly braces.
+
+
+```ruby
+irb(main):001:0> data = {"surya" => "IT", "ismail" => "UI" }
+=> {"surya"=>"IT", "ismail"=>"UI"}
+irb(main):002:0> puts data["surya"]
+IT
+=> nil
+irb(main):003:0> puts data["ismail"]
+UI
+=> nil
+```
+
+
+## Arrays
+
+
+An array stores data or list of data. It can contain all types of data. Data in an array are separated by comma in between them and are enclosed by square bracket
+
+
+```ruby
+irb(main):001:0> data = [ "surya", 283, { "name": "foo" } ]
+=> ["surya", 283, {:name=>"foo"}]
+```
+
+
+## Symbols
+
+
+Symbols are like strings. A symbol is preceded by a colon (:) Eg`:name`. They do not contain spaces. Symbols containing multiple words are written with a underscore (_) between them. **Sybmols are unique identifiers and represents static values**
+
+
+```ruby
+irb(main):001:0> "surya".object_id
+=> 1478571606440
+irb(main):002:0> "surya".object_id
+=> 1478572079320
+irb(main):003:0> :surya.object_id
+=> 2897308
+irb(main):004:0> :surya.object_id
+=> 2897308
+```
+

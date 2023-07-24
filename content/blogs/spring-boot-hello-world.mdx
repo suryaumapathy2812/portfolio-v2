@@ -1,0 +1,71 @@
+---
+title: Spring Boot - Hello world
+description: This is a beginners guide to start working on Java Spring Boot application 
+date: 2021-11-18
+---
+
+[video](https://www.youtube.com/watch?v=tsYndAElVa4)
+
+
+# Prerequisite
+
+- Java Developer Kit - [https://www.oracle.com/java/technologies/downloads/#jdk17-windows](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)
+- IDE (Preferred to use STS)
+	- Spring Tool Suite (STS) - [https://spring.io/tools](https://spring.io/tools)
+	- Eclipse - [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/)
+	- Visual Studio Code - [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- Postman - [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
+
+# Getting Started
+
+1. Visit [start.spring.io](http://start.spring.io/) to create a Spring Boot Project
+2. Choose the settings
+	1. **Project** - Maven Project
+	2. **Language** - Java
+	3. **Spring Boot** - Choose latest stable version (That is Non-snapshot version)
+	4. **Project Metadata** -
+		1. **Group** - com.surya
+		2. **Artifact** - todoapp
+		3. **Packaging** - Jar
+		4. **Java** - 17
+	5. **Dependencies** -
+		1. Spring Web
+		2. Spring Boot DevTools
+3. And Finally choose GENERATE to download the project.
+4. Extract the downloaded Zip
+5. Import the project as Maven project in IDE ( eclipse  or STS ).
+
+# Setting up the and running the server
+
+1. Right click on your Project, `Run as > maven install` ( To download dependencies for the project)
+2. Change the port
+	1. open the file `application.properties` under `src/main/resources`
+	2. type `server.port = 9000`
+3. Run the Spring Boot Application
+	1. Now right click `TodoappApplication.java` file under `src/main/java`
+	2. Choose `Run as > Java Application` and your application will be up and running
+4. Now, open your browser and visit the url [http://localhost:9000/](http://localhost:9000/)
+
+# Lets Start Coding
+
+
+Lets write some code to which will return a Hello world
+
+
+### Creating a Controller Class
+
+1. Right click `TodoappApplication.java` and choose `New > Class`
+2. First lets create a controller folder to organize the our controllers
+	1. Add `.controller` to the end of the Package Input Field `eg: com.surya.todoapp.controller`
+3. Enter the name of the controller in the Name field `eg: HelloController`  and click finish.
+4. Add  `@RestController` & `@RequestMapping()` Annotations above the class name.
+5. Now we'll create a new method inside the class which will return Hello world.
+
+	```java
+	@GetMapping
+	public String hello(){
+		return "Hello World";
+	}
+	```
+
+6. Save the file and visit the [http://localhost:9000](http://localhost:9000/api/tasks) to see if your application is working.
