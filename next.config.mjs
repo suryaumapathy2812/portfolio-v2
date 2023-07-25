@@ -7,6 +7,11 @@ const nextConfig = {
 		appDir: true,
 		mdxRs: true,
 	},
+	images: {
+		domains: [
+			"https://s3.us-west-2.amazonaws.com"
+		]
+	}
 };
 
 export default withContentlayer(nextConfig);

@@ -28,15 +28,17 @@ export default function Home() {
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={100}
 			/>
-			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+			<h1 className="flex flex-wrap z-10 text-6xl text-transparent text-center duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl lg:text-9xl md:whitespace-nowrap bg-clip-text ">
 				Surya Umapathy
 			</h1>
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
 				<h2 className="text-sm text-zinc-500 ">
-					Hi, my name is Surya, Passionate Full Stack Web Developer from Chennai,
-					<br />
+					Hi, my name is Surya,
+					<span className="sm:block md:inline"> </span>
+					Passionate Full Stack Web Developer from Chennai,
+					<span className="sm:inline md:block"> </span>
 					crafting innovative digital solutions during the tranquility of the night
 				</h2>
 			</div>
