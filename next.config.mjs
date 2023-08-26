@@ -8,10 +8,8 @@ const nextConfig = {
 		mdxRs: true,
 	},
 	images: {
-		domains: [
-			"https://s3.us-west-2.amazonaws.com"
-		]
-	}
+		domains: ["https://s3.us-west-2.amazonaws.com"],
+	},
 };
 
 export default withContentlayer(nextConfig);

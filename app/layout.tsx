@@ -3,15 +3,15 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 // import { Analytics } from "./components/analytics";
-import { Analytics } from '@vercel/analytics/react';
-
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
 	title: {
 		default: "suryaumapathy.in",
 		template: "%s | suryaumapathy.in",
 	},
-	description: "Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
+	description:
+		"Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
 	openGraph: {
 		title: "suryaumapathy.in",
 		description:
@@ -64,10 +64,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			<head>
-			</head>
+			<head></head>
 			<body
-				className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined}`} >
+				className={`bg-black ${
+					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+				}`}
+			>
 				{children}
 				<Analytics />
 			</body>

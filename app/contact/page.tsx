@@ -23,7 +23,6 @@ const socials = [
 		label: "Gmail",
 		handle: "suryaumapathy2812@",
 	},
-
 ];
 
 export default function Example() {

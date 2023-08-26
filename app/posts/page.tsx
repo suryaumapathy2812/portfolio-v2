@@ -13,7 +13,7 @@ export const revalidate = 60;
 export default async function ProjectsPage() {
 	const views = (
 		await redis.mget<number[]>(
-			...allBlogs.map((p) => ["pageviews", "posts", p.slug].join(":")),
+			...allBlogs.map((p) => ["pageviews", "projects", p.slug.toLowerCase()].join(":")),
 		)
 	).reduce((acc, v, i) => {
 		acc[allBlogs[i].slug] = v ?? 0;
@@ -22,7 +22,9 @@ export default async function ProjectsPage() {
 
 	const featured = allBlogs.find((blog) => blog.slug === "ruby")!;
 	const top2 = allBlogs.find((blog) => blog.slug === "folder-structure")!;
-	const top3 = allBlogs.find((blog) => blog.slug === "javascript-email-notification")!;
+	const top3 = allBlogs.find(
+		(blog) => blog.slug === "javascript-email-notification",
+	)!;
 	const sorted = allBlogs
 		.filter(
 			(blog) =>

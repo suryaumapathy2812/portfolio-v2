@@ -39,7 +39,8 @@ export default function Home() {
 					<span className="sm:block md:inline"> </span>
 					Passionate Full Stack Web Developer from Chennai,
 					<span className="sm:inline md:block"> </span>
-					crafting innovative digital solutions during the tranquility of the night
+					crafting innovative digital solutions during the tranquility of the
+					night
 				</h2>
 			</div>
 		</div>

@@ -5,6 +5,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import { Suspense } from "react";
 
 export const revalidate = 60;
 
@@ -17,11 +18,13 @@ type Props = {
 const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
-	return allBlogs
-		// .filter((p) => p.published)
-		.map((p) => ({
-			slug: p.slug,
-		}));
+	return (
+		allBlogs
+			// .filter((p) => p.published)
+			.map((p) => ({
+				slug: p.slug,
+			}))
+	);
 }
 
 export default async function PostPage({ params }: Props) {
@@ -32,13 +35,18 @@ export default async function PostPage({ params }: Props) {
 		notFound();
 	}
 
-	const views =
-		(await redis.get<number>(["pageviews", "posts", slug].join(":"))) ?? 0;
+	const redisPageString = ["pageviews", "projects", slug.toLowerCase()].join(":");
+
+	const views = (await redis.get<number>(redisPageString)) ?? 0;
+
+	console.log(redisPageString + "================> " + views);
 
 	return (
 		<div className="bg-zinc-50 min-h-screen">
-			<Header blog={blog} views={views} />
-			<ReportView slug={blog.slug} />
+			<Suspense>
+				<Header blog={blog} views={views} />
+				<ReportView slug={blog.slug} />
+			</Suspense>
 
 			<article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
 				<Mdx code={blog.body.code} />
