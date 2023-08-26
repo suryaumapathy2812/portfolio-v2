@@ -34,13 +34,9 @@ export default async function PostPage({ params }: Props) {
 	if (!blog) {
 		notFound();
 	}
-
+	
 	const redisPageString = ["pageviews", "projects", slug.toLowerCase()].join(":");
-
 	const views = (await redis.get<number>(redisPageString)) ?? 0;
-
-	console.log(redisPageString + "================> " + views);
-
 	return (
 		<div className="bg-zinc-50 min-h-screen">
 			<Suspense>
