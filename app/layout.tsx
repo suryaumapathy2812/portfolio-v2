@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 		template: "%s | suryaumapathy.in",
 	},
 	description:
-		"Surya Umapathy is a Founding Engineer at Forever Learning building Intervoo.ai, voice AI for English speaking and interview readiness.",
+		"Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
 	openGraph: {
-		title: "Surya Umapathy | Founding Engineer, Forever Learning",
+		title: "suryaumapathy.in",
 		description:
-			"Building Intervoo.ai: voice AI for English speaking practice, interview readiness, diagnostics, and learner evaluations.",
+			"Passionate Full Stack Web Developer from Chennai, crafting innovative digital solutions during the tranquility of the night",
 		url: "https://suryaumapathy.in",
 		siteName: "suryaumapathy.in",
 		images: [
